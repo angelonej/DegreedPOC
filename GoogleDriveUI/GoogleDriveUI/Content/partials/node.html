@@ -1,0 +1,11 @@
+<li>
+    <font size="+2"><span style="width:15px" ng-click="toggleVisibility(node)"> {{ ( node.childrenVisibility && node.Children.length ) ? '+' : '-&nbsp;' }}</span></font>
+    <!--<input ng-click="checkNode(node)" type="checkbox" ng-checked="node.Checked">-->
+    <span ng-click="checkNode(node)">
+        <img ng-if="!( node.Checked)" src="content/images/folder.png" />
+        <img ng-if="( node.Checked)" src="content/images/folder_checked.png" />
+       <!--<img ng-if="( node.expanded)" src="content/images/folder-open.png" height="32" width="32" />
+        <img height="32" width="32" ng-if="!( node.expanded)" src="content/images/folder-close.png"/>-->  
+        {{ node.Name }}
+    </span>
+</li>
